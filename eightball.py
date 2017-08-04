@@ -1,14 +1,19 @@
 import random
+answers = [ "It is certain", 
+            "Outlook good", 
+            "You may rely on it", 
+            "Ask again later", 
+            "Concentrate and ask again", 
+            "Reply hazy, try again", 
+            "My reply is no", 
+            "My sources say no"]
 
 prompt = "Enter your question: "
 question = input(prompt)
-response = random.randint(1,4)
 
-if response == 1:
-    print("It is certain")
-elif response == 2:
-    print("Outlook good")
-elif response == 3:
-    print("You may rely on it")
-elif response == 4:
-    print("Ask again later")
+# In python, lists are zeo indexed. 
+# For a list of 8 responses, the first item 
+# is index 0 and the last is index 7
+response = random.randint(1,8) - 1
+
+print(answers[response])
